@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tire o seu CNIS pelo celular – NPJ-UDF</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#17408b;--ink:#13213f;--cream:#fff7dc;--yellow:#f2b705;--red:#e5392d;--mint:#bfeee3;--sky:#cfe0ff;--card:#fff;--txt:#13213f;--sun:#ffdf8a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--cream:#0e1a33;--card:#1b2b52;--txt:#f3f0e4;--mint:#16403d;--sky:#1d3563;--sun:#4a3f12;--ink:#0a1228}}
+:root[data-theme="dark"]{--cream:#0e1a33;--card:#1b2b52;--txt:#f3f0e4;--mint:#16403d;--sky:#1d3563;--sun:#4a3f12;--ink:#0a1228}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--cream);color:var(--txt);font-family:Nunito,system-ui,sans-serif;font-weight:700;line-height:1.45}
+h1,h2,h3,.fr{font-family:Fredoka,Nunito,system-ui,sans-serif}
+.wrap{max-width:980px;margin:0 auto;padding:0 18px}
+header{background:var(--navy);color:#fff;padding:22px 0 70px;position:relative}
+header::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:44px;background:var(--cream);
+-webkit-mask:radial-gradient(34px 22px at 34px 0,#0000 98%,#000) 0 0/68px 100%;mask:radial-gradient(34px 22px at 34px 0,#0000 98%,#000) 0 0/68px 100%}
+.hd{display:flex;gap:18px;align-items:center;justify-content:space-between}
+.org{font-size:.95rem;margin:0 0 6px}
+h1{color:var(--yellow);font-size:clamp(2rem,6vw,3.4rem);line-height:1.05;margin:0 0 10px;font-weight:700}
+.sub{margin:0;font-size:1.1rem}
+.mascot{width:130px;flex:none}
+.alert{margin:-8px 0 26px;background:var(--red);color:#fff;border:3px solid var(--ink);border-radius:14px;padding:14px 18px;text-align:center;font-family:Fredoka;font-size:clamp(1rem,2.6vw,1.3rem);font-weight:600;transform:rotate(-.6deg);box-shadow:6px 6px 0 var(--ink)}
+h2{font-size:clamp(1.4rem,3.6vw,2rem);margin:0 0 6px;font-weight:600}
+.lead{margin:0 0 18px}
+.panel{border:3px solid var(--ink);border-radius:26px;padding:20px;box-shadow:8px 8px 0 var(--ink);margin-bottom:34px}
+.mint{background:var(--mint)}.sky{background:var(--sky)}
+.tag{display:inline-block;background:var(--ink);color:var(--yellow);font-family:Fredoka;border-radius:14px;padding:8px 18px;font-size:1.2rem;margin-bottom:14px}
+.check{display:flex;flex-direction:column;gap:10px}
+.item{display:flex;align-items:center;gap:14px;background:var(--card);border:3px solid var(--ink);border-radius:16px;padding:12px 14px;cursor:pointer;text-align:left;font:inherit;color:var(--txt);width:100%}
+.item .box{width:30px;height:30px;border:3px solid var(--ink);border-radius:9px;flex:none;display:grid;place-items:center;font-size:1.1rem;color:#fff;background:var(--card);transition:background .15s}
+.item[aria-pressed="true"] .box{background:#1f9d6b}
+.item[aria-pressed="true"] .box::after{content:"✓"}
+.item small{display:block;font-weight:600;opacity:.75}
+.bar{height:16px;border:3px solid var(--ink);border-radius:99px;background:var(--card);margin-top:14px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--yellow);transition:width .3s}
+.msg{margin:8px 0 0;font-family:Fredoka;font-size:1.05rem;min-height:1.6em}
+.stage{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:24px;align-items:center}
+.phone{width:270px;height:500px;margin:0 auto;border:4px solid var(--ink);border-radius:38px;background:#fff;color:#13213f;padding:14px 12px;position:relative;overflow:hidden;box-shadow:6px 6px 0 var(--ink)}
+.phone::before{content:"";display:block;width:70px;height:6px;border-radius:9px;background:#13213f;margin:0 auto 14px;opacity:.7}
+.scr{display:flex;flex-direction:column;gap:10px;font-size:.92rem}
+.top{background:#17408b;color:#fff;border-radius:12px;padding:10px;text-align:center;font-family:Fredoka}
+.fld{border:2px solid #13213f;border-radius:10px;padding:10px;background:#f4f6fb;font-weight:700}
+.btn{border:2px solid #13213f;border-radius:12px;background:#e8edf8;padding:11px;text-align:center;font:inherit;font-weight:800;color:#13213f;width:100%}
+.row{border:2px solid #13213f;border-radius:10px;padding:9px;background:#fff;display:flex;gap:8px;align-items:center;font:inherit;color:#13213f;width:100%;text-align:left}
+.hot{background:var(--yellow)!important;cursor:pointer;animation:pulse 1.3s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 #f2b705aa}50%{box-shadow:0 0 0 9px #f2b70500}}
+@media (prefers-reduced-motion:reduce){.hot{animation:none}.item .box,.bar i{transition:none}}
+.ok{background:#1f9d6b;color:#fff;border-radius:12px;padding:12px;text-align:center}
+.say{background:var(--card);border:3px solid var(--ink);border-radius:20px;padding:16px}
+.say h3{margin:0 0 6px;font-size:1.3rem}
+.say p{margin:0 0 10px}
+.dots{display:flex;gap:8px;margin:12px 0}
+.dots span{width:14px;height:14px;border-radius:50%;border:2px solid var(--ink);background:var(--card)}
+.dots .on{background:var(--yellow)}.dots .done{background:#1f9d6b}
+.nav{display:flex;gap:10px;flex-wrap:wrap}
+.nav button,.cta{font:inherit;font-family:Fredoka;font-weight:600;font-size:1rem;border:3px solid var(--ink);border-radius:14px;padding:10px 18px;background:var(--yellow);color:#13213f;cursor:pointer;box-shadow:3px 3px 0 var(--ink)}
+.nav button.alt{background:var(--card);color:var(--txt)}
+.nav button:disabled{opacity:.4;cursor:default}
+button:focus-visible{outline:4px solid #7aa7ff;outline-offset:2px}
+details{background:var(--card);border:3px solid var(--ink);border-radius:16px;padding:12px 16px;margin-bottom:10px}
+summary{cursor:pointer;font-family:Fredoka;font-size:1.1rem;font-weight:600}
+details p{margin:8px 0 0}
+.tip{background:var(--sun);border:3px dashed var(--ink);border-radius:20px;padding:16px 18px;margin:10px 0 36px;display:flex;gap:12px;align-items:flex-start}
+footer{background:var(--navy);color:#fff;padding:26px 0 34px}
+footer .wrap{display:flex;justify-content:space-between;gap:18px;align-items:center;flex-wrap:wrap}
+footer p{margin:4px 0;font-size:1.05rem}footer b{color:var(--yellow);font-size:1.2rem}
+.qr{width:130px;height:130px;background:#fff;color:#13213f;border:4px solid var(--yellow);border-radius:16px;display:grid;place-items:center;text-align:center;font-size:.85rem;padding:8px}
+@media (max-width:760px){.stage{grid-template-columns:1fr}.mascot{width:84px}.phone{order:-1}}
+</style>
+</head>
+<body>
+<header><div class="wrap hd">
+<div><p class="org">NPJ-UDF · Núcleo de Prática Jurídica da UDF</p>
+<h1>Tire o seu CNIS pelo celular!</h1>
+<p class="sub">Passo a passo no aplicativo Meu INSS</p></div>
+<svg class="mascot" viewBox="0 0 130 100" aria-hidden="true"><rect x="4" y="22" width="62" height="70" rx="8" fill="#f2b705" stroke="#13213f" stroke-width="4"/><rect x="14" y="8" width="42" height="26" rx="4" fill="#fff" stroke="#13213f" stroke-width="4" transform="rotate(-8 35 21)"/><circle cx="96" cy="60" r="28" fill="#fde0b6" stroke="#13213f" stroke-width="4"/><path d="M68 52a28 24 0 0 1 56 0z" fill="#f2b705" stroke="#13213f" stroke-width="4"/><circle cx="87" cy="62" r="3" fill="#13213f"/><circle cx="105" cy="62" r="3" fill="#13213f"/><path d="M88 72q8 7 16 0" fill="none" stroke="#13213f" stroke-width="3" stroke-linecap="round"/><circle cx="80" cy="70" r="5" fill="#f58b8b"/><circle cx="112" cy="70" r="5" fill="#f58b8b"/></svg>
+</div></header>
+
+<main class="wrap">
+<div class="alert">Atenção! Fornecer os documentos é responsabilidade do assistido</div>
+
+<section class="panel mint" aria-labelledby="t1">
+<span class="tag">Antes de começar</span>
+<h2 id="t1">Marque o que você já tem</h2>
+<p class="lead">Toque em cada item quando estiver tudo pronto.</p>
+<div class="check" id="pre"></div>
+<div class="bar" aria-hidden="true"><i id="fill"></i></div>
+<p class="msg" id="premsg" aria-live="polite"></p>
+</section>
+
+<section class="panel sky" aria-labelledby="t2">
+<span class="tag">Passo a passo</span>
+<h2 id="t2">Vamos tirar o seu CNIS juntos</h2>
+<p class="lead">Toque no botão amarelo do celular para avançar, como se fosse o seu aparelho.</p>
+<div class="stage">
+<div class="say"><h3 id="stt"></h3><p id="stp"></p><p id="stx" class="fr"></p>
+<div class="dots" id="dots" aria-hidden="true"></div>
+<div class="nav"><button class="alt" id="prev">Voltar</button><button id="next">Próximo passo</button><button class="alt" id="again" hidden>Ver de novo</button></div></div>
+<div class="phone" id="phone" aria-label="Tela de exemplo do celular"></div>
+</div>
+</section>
+
+<section aria-labelledby="t3">
+<h2 id="t3">Deu algum problema?</h2>
+<details><summary>Não tenho conta gov.br</summary><p>Crie a sua pelo aplicativo ou site gov.br usando o seu CPF. Depois, volte ao Meu INSS e siga os passos.</p></details>
+<details><summary>Esqueci a minha senha</summary><p>Na tela de senha do gov.br, toque em “Esqueci minha senha” e siga as instruções para criar uma nova.</p></details>
+<details><summary>Não achei o “Extrato de Contribuição (CNIS)”</summary><p>Procure pelo nome do serviço na tela inicial ou use o campo de busca do aplicativo. O serviço também aparece no site meu.inss.gov.br.</p></details>
+<details><summary>Não consegui de jeito nenhum</summary><p>Sem problema! Fale com o NPJ pelo telefone ou WhatsApp, ou venha no horário de atendimento. A gente te ajuda.</p></details>
+</section>
+
+<div class="tip"><span aria-hidden="true" style="font-size:1.6rem">✅</span><div>Salvou o PDF? Guarde no celular ou imprima e <b>leve ao NPJ/UDF</b> junto com os outros documentos da sua lista (CTPS, extrato do FGTS, laudo e demais).</div></div>
+</main>
+
+<footer><div class="wrap">
+<div><p>Horário de atendimento: <b>14h às 16h</b></p>
+<p>Telefone e WhatsApp: <b>(61) 9 9983-2665</b> ou <b>3521-3468</b></p>
+<p>Lista completa: aponte a câmera para o código!</p></div>
+<div class="qr">[QR CODE dos documentos]</div>
+</div></footer>
+
+<script>
+var PRE=[["Celular com internet",""],["CPF","Número do seu documento"],["Conta gov.br com senha","Se não tem, veja “Deu algum problema?”"],["Aplicativo Meu INSS instalado","Gratuito, para Android e iPhone"]];
+var pre=document.getElementById("pre"),fill=document.getElementById("fill"),pm=document.getElementById("premsg");
+PRE.forEach(function(p){var b=document.createElement("button");b.className="item";b.setAttribute("aria-pressed","false");
+b.innerHTML='<span class="box"></span><span>'+p[0]+(p[1]?'<small>'+p[1]+'</small>':'')+'</span>';
+b.onclick=function(){b.setAttribute("aria-pressed",b.getAttribute("aria-pressed")==="true"?"false":"true");upd()};pre.appendChild(b)});
+function upd(){var n=pre.querySelectorAll('[aria-pressed="true"]').length;fill.style.width=(n/PRE.length*100)+"%";
+pm.textContent=n===PRE.length?"Tudo pronto! Pode seguir para o passo a passo. 🎉":n+" de "+PRE.length+" itens separados"}
+upd();
+
+var S=[
+{t:"Baixe o aplicativo",p:"Abra a loja do celular (Play Store ou App Store) e procure por “Meu INSS”. Toque em Instalar. É gratuito.",x:"Passo 1 de 6",
+ h:'<div class="scr"><div class="fld">🔍 Meu INSS</div><div class="row"><span style="font-size:1.6rem">🏛️</span><span>Meu INSS<br><small>INSS · Governo Federal</small></span></div><button class="btn hot">Instalar</button></div>'},
+{t:"Abra e entre com gov.br",p:"Abra o Meu INSS e toque em “Entrar com gov.br”.",x:"Passo 2 de 6",
+ h:'<div class="scr"><div class="top">Meu INSS</div><p style="text-align:center;margin:20px 0">Bem-vindo(a)!</p><button class="btn hot">Entrar com gov.br</button></div>'},
+{t:"Digite o seu CPF",p:"Escreva o número do seu CPF e toque em “Continuar”.",x:"Passo 3 de 6",
+ h:'<div class="scr"><div class="top">gov.br</div><p>Digite seu CPF</p><div class="fld">123.456.789-00</div><button class="btn hot">Continuar</button></div>'},
+{t:"Digite a sua senha",p:"Coloque a senha da sua conta gov.br e toque em “Entrar”.",x:"Passo 4 de 6",
+ h:'<div class="scr"><div class="top">gov.br</div><p>Digite sua senha</p><div class="fld">••••••••</div><button class="btn hot">Entrar</button></div>'},
+{t:"Ache o extrato do CNIS",p:"Na tela, procure “Extrato de Contribuição (CNIS)” e toque nessa opção.",x:"Passo 5 de 6",
+ h:'<div class="scr"><div class="top">Serviços</div><div class="row">📅 Agendamentos</div><div class="row">📄 Meus Requerimentos</div><button class="row hot">📑 Extrato de Contribuição (CNIS)</button></div>'},
+{t:"Baixe o documento",p:"O seu CNIS vai aparecer na tela. Toque em “Baixar Documento” e salve o PDF no celular.",x:"Passo 6 de 6",
+ h:'<div class="scr"><div class="top">Extrato (CNIS)</div><div class="row">🏢 Vínculo 1 <small>▼</small></div><div class="row">🏢 Vínculo 2 <small>▼</small></div><button class="btn hot" id="dl">Baixar Documento</button><div class="ok" id="okm" hidden>O documento foi baixado com sucesso. 🎉</div></div>'}
+];
+var i=0,fin=false,$=function(id){return document.getElementById(id)};
+function render(){var s=S[i];$("stt").textContent=s.t;$("stp").textContent=s.p;$("stx").textContent=fin?"Parabéns! Você tirou o seu CNIS. 🎉":s.x;
+$("phone").innerHTML=s.h;var d="";S.forEach(function(_,k){d+='<span class="'+(k<i||fin?"done":k===i?"on":"")+'"></span>'});$("dots").innerHTML=d;
+$("prev").disabled=i===0;$("next").hidden=fin;$("again").hidden=!fin;$("next").textContent=i===S.length-1?"Concluir":"Próximo passo";
+var h=$("phone").querySelector(".hot");if(h)h.onclick=go}
+function go(){if(i<S.length-1){i++;render()}else{$("dl").hidden=true;$("okm").hidden=false;fin=true;$("stx").textContent="Parabéns! Você tirou o seu CNIS. 🎉";$("next").hidden=true;$("again").hidden=false;
+document.querySelectorAll("#dots span").forEach(function(e){e.className="done"})}}
+$("next").onclick=go;$("prev").onclick=function(){if(i>0){i--;fin=false;render()}};$("again").onclick=function(){i=0;fin=false;render()};
+render();
+</script>
+</body>
+</html>
